@@ -1,0 +1,1367 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400&display=swap');
+/* .image-container {
+    position: relative;
+    margin: auto;
+    width: 500px;
+} */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* overflow-y: hidden; */
+
+}
+:root{
+    --body-color: radial-gradient( circle farthest-corner at 10% 20%,  rgb(82, 34, 94) 0%, rgba(4,0,4,1) 90% );
+    --nav-color: rgb(53, 5, 53);
+    --loginregister-bg: rgba(37, 36, 36, 0.897)
+}
+
+
+.navbar{
+    background-color: var(--nav-color);
+    box-shadow: 1px 1px 4px black;
+}
+.basenav{
+    display: flex;
+    gap: 8px;
+}
+
+.navbar li{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
+.basenav li{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.basenav li.nav-item a{
+    color: #fff;
+}
+.basenav li.nav-item.active a{
+    color: yellow;
+    /* text-decoration: underline; */
+    /* text-underline-offset: 0.6rem; */
+}
+.basenav li.nav-item a:hover{
+    color: yellow;
+}
+
+.navbar-nav a:hover{
+    text-decoration: underline;
+    text-decoration-style:solid;
+    text-underline-offset: 0.6rem;
+    transition: 0.5s;
+    /* opacity: 1; */
+}
+
+#homebody .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    gap: 20px;
+    height: 90vh;
+}
+/* #homebody .container h1{
+    font-size: 7rem;
+}
+#homebody .container .description-brandname{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    font-size: 1.3rem;
+} */
+
+#brandname{
+    font-family: 'Dancing Script', cursive;
+}
+#homebody .carousel-caption #brandname{
+    font-size: 9rem;
+    background-color: #2928283a;
+}
+.card-title{
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Noto Serif', serif;
+    font-weight: 400;
+    font-size: 3rem;
+}
+#eventcard .card-text{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.brandnavbar{
+    font-size: 3.5rem;
+}
+.photocaption{
+    font-size: 4rem;
+}
+.captionHome{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+}
+.captionHome h1{
+    font-size: 6.5rem;
+}
+
+.caption{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.295);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+#homebody .carousel-item img{
+    height: 600px;
+    border-radius: 5px;
+}
+#homebody #events{
+    margin-top: 230px;
+}
+#homebody #events h2{
+    font-size: 3.5rem;
+    font-family: 'Montserrat', sans-serif;
+}
+#homebody #events .card{
+    border-radius: 54px;
+    background: none;
+    box-shadow: 2px 2px 5px black;
+    border: none;
+    height: 50vh;
+}
+#homebody #events .card-body{
+    text-align: center;
+}
+#homebody #events .card-body a{
+    text-decoration: none;
+    color: white;
+}
+
+.about{
+    font-family: 'Noto Serif', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.aboutcaption{
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    font-size: 4.2rem;
+}
+.aboutpara{
+    width: 80%;
+    color: #fff;
+    font-size: 1.2rem;
+    opacity: .5;
+    text-align: justify;
+    line-height: 35px;
+}
+#aboutbody .gallary_title{
+    font-family: 'Noto Serif', serif;
+    font-size: 4rem;
+}
+#aboutbody .aboutimg{
+    display: flex;
+    justify-content: center;  
+}
+
+#aboutbody .carousel-item img{
+    height: 350px;
+    width: 34vw;
+    border: 3px solid #ffffffd3;
+    border-radius: 10px;
+}
+
+.form-group{
+    margin-bottom: 25px;
+    color: #fff;
+}
+.person-address-field{
+    color: black;
+    padding: 10px;
+    height: 100px;
+    border-radius: 8px;
+    width: 300px;
+    font-size: 14px;
+}
+
+.person-address-field::placeholder{
+    color: #00000083;
+}
+
+.bookingcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+    background: rgba(17, 17, 17, 0.925);;
+}
+
+#field-id{
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: black;        /*text color in the field*/
+    padding: 10px;
+    border-radius: 8px;
+    width: 300px;
+    height: 50px;
+    font-size: 14px;
+}
+
+#field-id::placeholder{
+    color: #00000083;
+}
+.bookingbtn{
+    font-weight: 600;
+    width: 65%;
+}
+#confirmationbody .returnticket a{
+    text-decoration: none;
+}
+#confirmationbody .returnticket a:hover{
+    text-decoration: underline;
+    color: rgba(255, 0, 0, 0.781);
+}
+
+.returntitle a{
+    color: black;
+    opacity: 0.8;
+    text-decoration: none;
+}
+.returntitle a:hover{
+    opacity: 1;
+    color: black;
+    text-decoration: underline;
+}
+
+#homebody{
+    background-image: var(--body-color);
+}
+#eventbody{
+    background-image: var(--body-color);
+} 
+#teambody{
+    background-image: var(--body-color);
+} 
+#musicbody{
+    background-image: var(--body-color);
+}
+#bookingbody{
+    background-image: var(--body-color);
+    font-family: 'Noto Serif', serif;
+
+}
+#contactbody{
+    background-color: rgb(231, 221, 221);
+    font-family: 'Noto Serif', serif;
+}
+#aboutbody{
+    background-image: var(--body-color);
+}
+
+#eventcard{
+    width: 55rem;
+    box-shadow: 2px 2px 15px black;
+}
+#eventcard .card-text{
+    opacity: 0.6;
+}
+#eventcardimg{
+    height: 400px;
+}
+#bookbtn{
+    background-color: rgb(110, 15, 110);
+    color: #fff;
+    transition: all 0.3s;
+}
+#bookbtn:hover{
+    /* outline: rgb(110, 15, 110); */
+    border: 2px solid rgb(110, 15, 110);;
+    color: rgb(110, 15, 110);
+    font-weight: bolder;
+    background-color: #fff;
+    transform: scale3d(1.1,1.1,1.1);
+    /* transform: translateY(-3px); */
+}
+
+#cardcontainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#card-body-event{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.team-card{
+    width: 25rem;
+    display: inline-block;
+}
+.team-member-img{
+    float: left;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 2px 2px 15px black;
+    border-radius: 8px;
+}
+.team-img{
+    width: 380px;
+    height: 350px;
+}
+#card-body-team{
+    text-align: start;
+    position: relative;
+    left: 2%;
+}
+.team-name{
+    font-family: 'Merriweather', serif;
+    font-size: 3.5rem;
+    font-weight: bolder;
+}
+.team-label{
+    font-family: 'Mulish', sans-serif;
+    font-size: 2rem;
+    opacity: 0.5;
+}
+.team-desc{
+    font-family: 'Mulish', sans-serif;
+    font-weight: 400;
+    opacity: 0.6;
+    text-align: justify;
+}
+.playlistdiv a{
+    text-decoration: none;
+}
+.playlistdiv a{
+    color: green;
+    font-size: 1.2rem;
+}
+.playlistdiv a span{
+    font-size: 1.2rem;
+    color: gray;
+}
+.playlistdiv a:hover{
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+/* Music */
+.musiccontents{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.song_details{
+    display: flex;
+    font-family: 'Merriweather', serif;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+.song_title{
+    font-size: 3.6rem;
+    font-weight: 600;
+}
+
+.song_desc{
+    font-weight: 600;
+    opacity: 0.5;
+    font-size: 1.3rem;
+    width: 80%;
+    line-height: 40px;
+}
+
+.youtubeimg{
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px black;
+}
+
+.song_details iframe{
+    width: 560px;
+    height: 320px;
+}
+#contactbody form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contactform input{
+    width: 100%;
+    height: 50px;
+}
+.contactform textarea{
+    width: 100%;
+    height: 150px;
+}
+.contactform .btn{
+    background-color: rgb(53, 5, 53);
+    color: #fff;
+}
+#loginbody{
+    background-image: var(--body-color);
+}
+.centre-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login{
+    background: rgba(17, 17, 17, 0.925);
+    border: 2px solid rgba(255, 255, 255, .2);
+    width: 420px;
+    border-radius: 15px;
+    padding: 30px 40px;
+    color: #fff;
+}
+.login h1{
+    font-size: 3.5rem;
+}
+.login .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+.loginbtn a{
+    text-decoration: none;
+    color: black;
+}
+.loginbtn:hover{
+    transform: scale3d(1.02, 1.02, 1.02);
+}
+.input-box input::placeholder{
+    color: rgba(255, 255, 255, 0.589);
+}
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.centre-container .loginbtn{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    color: #333;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.centre-container .register-link{
+    font-size: 15px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+.register-link p a{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+.register-link p a:hover{
+    text-decoration: underline;
+}
+/* _____________________________________________________________ */
+.register .input-box-reg{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+.input-box-reg input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 20px;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+}
+.regbtn a{
+    text-decoration: none;
+    color: black;
+}
+.regbtn:hover{
+    transform: scale3d(1.02, 1.02, 1.02);
+}
+.input-box-reg input::placeholder{
+    color: rgba(255, 255, 255, 0.589);
+}
+.input-box-reg i{
+    position: absolute;
+    right: 20px;
+    top: 98%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.centre-container .regbtn{
+    width: 100%;
+    height: 50px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+    cursor: pointer;
+    color: #333;
+    font-weight: 600;
+    margin-top: 20px;
+}
+.register{
+    background: rgba(17, 17, 17, 0.925);
+    border: 2px solid rgba(255, 255, 255, .2);
+    width: 420px;
+    border-radius: 15px;
+    padding: 30px 40px;
+    color: #fff;
+}
+.register label{
+    margin-left: 10px;
+    margin-bottom: 3px;
+    text-align: start;
+}
+.register h1{
+    font-size: 3.5rem;
+}
+.register .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+
+#createticket_body{
+    background-image: var(--body-color);
+    overflow-x: hidden;
+}
+#createticket_body .card{
+    background: rgba(17, 17, 17, 0.925);
+    width: 30rem;
+}
+#createticket_body .form-control{
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 13px;
+    font-size: 15px;
+    padding: 20px 45px 20px 20px;
+}
+#createticket_body .form-control::placeholder{
+    color: rgba(255, 255, 255, 0.589);
+}
+
+#tablebody_alltickets{
+    background-image: var(--body-color);
+}
+
+#tablebody_alltickets .text-success{
+    text-decoration: none;
+    opacity: 0.8;
+}
+#tablebody_alltickets .text-success:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+#ticketdetails_body{
+    background-image: var(--body-color);
+}
+#ticketdetails_body .card{
+    border: 2px solid #fff;
+}
+#ticketdetails_body .card-body{
+    color: #fff;
+}
+
+#dashboard_body{
+    background-image: var(--body-color);
+}
+#dashboard_body .container{
+    color: #fff;
+}
+#ticketqueue_body{
+    background-image: var(--body-color);
+}
+#ticketqueue_body .card{
+    background-image: var(--body-color);
+}
+
+#ticketqueue_body .text-danger{
+    text-decoration: none;
+    opacity: 0.8;
+}
+#ticketqueue_body .text-danger:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+#workspace_body{
+    background-image: var(--body-color);
+}
+#workspace_body .text-danger{
+    text-decoration: none;
+    opacity: 0.8;
+}
+#workspace_body .text-danger:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+#workspace_body table{
+    text-align: center;
+    max-width: 60rem;
+}
+.workspace_table{
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 20px rgb(59, 7, 88);
+}
+.workspace_table thead tr{
+    background-color: rgb(59, 7, 88);
+}
+.workspace_table thead th{
+    color: #fff;
+}
+.workspace_table td{
+    color: rgb(102, 17, 102);
+    font-weight: bolder;
+}
+.workspace_table tbody tr:last-of-type{
+    border-bottom: 3px solid rgb(108, 19, 150);
+}
+.workspace_table tbody tr:hover{
+    background-color: #e7dede;
+}
+
+.ticketqueue_table{
+    max-width: 60rem;
+    text-align: center;
+    border-collapse: collapse;
+    box-shadow: 3px 3px 20px rgb(59, 7, 88);
+    background-color: #fff;
+}
+.ticketqueue_table thead tr{
+    background-color: rgb(59, 7, 88);
+}
+.ticketqueue_table thead th{
+    color: #fff;
+}
+.ticketqueue_table tbody tr:hover{
+    background-color: #e7dede;
+}
+
+.ticketqueue_table tbody tr:last-of-type{
+    border-bottom: 3px solid rgb(108, 19, 150);
+
+}
+.ticketqueue_table td{
+    color: rgb(102, 17, 102);
+    font-weight: bolder;
+}
+
+
+.accept_ticket{
+    text-decoration: none;
+    color: green;
+    opacity: 0.8;
+}
+.accept_ticket:hover{
+    text-decoration: underline;
+    opacity: 1;
+    text-underline-offset: 0.6rem;
+}
+
+.view_ticket{
+    text-decoration: none;
+    color: green;
+    opacity: 0.8;
+}
+.view_ticket:hover{
+    text-decoration: underline;
+    opacity: 1;
+}
+
+#ticketdetails_body{
+    overflow-x: hidden;
+}
+#ticketdetails_body .card{
+    max-width: 50rem;
+}
+#ticketdetails_body .card-text{
+    
+    font-size: 1.1rem;
+}
+
+#tablebody_alltickets{
+    display: flex;
+    flex-direction: column;
+}
+.all_tickets_table{
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 20px rgb(59, 7, 88);
+}
+.all_tickets_table thead th{
+    color: #fff;
+}
+.all_tickets_table thead tr{
+    background-color: rgb(59, 7, 88);    
+}
+
+.all_tickets_table tbody tr:hover{
+    background-color: #e7dede;
+}
+/* .all_tickets_table tbody tr:nth-of-type(even){
+    background-color: red;
+} */
+.all_tickets_table tbody tr:last-of-type{
+    border-bottom: 3px solid rgb(108, 19, 150);
+}
+
+#tablebody_alltickets td, th{
+    color: rgb(102, 17, 102);
+    font-weight: bolder;
+}
+#tablebody_alltickets table{
+    text-align: center;
+    max-width: 60rem;
+}
+
+
+#ticketqueue_body{
+    display: flex;
+    flex-direction: column;
+}
+#ticketqueue_body table{
+    text-align: center;
+}
+#ticketqueue_body table, th, tr, td{
+    border: 2px solid #fff;
+    padding: 18px;
+}
+
+
+@media(max-width: 768px){
+    #homebody #mainsection{
+        margin-bottom: 60px;
+    }
+
+    #homebody .carousel-item img{
+        height: 500px;
+    }
+    #homebody #events{
+        margin-top: 200px;
+    }
+    #homebody .container h1{
+        font-size: 5.4rem;
+    }
+    #homebody .container .description-brandname{
+        font-size: 1.25rem;
+    }
+    
+    .navbar-nav{
+        z-index: 1;
+        position: relative;
+        right: 6%;
+        top: 2%;
+        position: fixed;
+    }
+    .navbar-toggler{
+        position: fixed;
+        right: 20%;
+    }
+    .cardcontainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 24px;
+        padding-right: 12px;
+    }
+    #homebody #events h2{
+        font-size: 3.3rem;
+    }
+    #homebody #events .card{
+        border-radius: 60px;
+        border: none;
+        height: 40vh;
+    }
+
+    .aboutcaption{
+        font-size: 3.6rem;
+    }
+    .aboutpara{
+        width: 85%;
+        font-size: 1.15rem;
+        line-height: 33px;
+    }
+
+    #eventcard{
+        width: 22rem;
+        height: 30rem;
+        position: relative;
+        right: 10%;
+    }
+    #eventcardimg{
+        height: 180px;
+    }
+    #eventcard .card-body{
+        height: 100px;
+    }
+    #eventcard .caption{
+        position: absolute;
+        top: 21%;
+    }
+    #eventcard .caption .photocaption{
+        font-size: 1.9rem;
+    }
+    #eventcard .card-title{
+        font-size: 1.5rem;
+    }
+    #eventcard .card-text{
+        font-size: 0.8rem;
+    }
+    #eventcard .btn{
+        width: 90px;
+    }
+    #eventcard .spot{
+        font-size: 0.95rem;
+    }
+    #eventcard a{
+        font-size: 0.8rem;
+    }
+
+    #cardcontainer{     /*event*/
+        z-index: -1;
+        position: relative;
+        left: 4%;
+    }
+
+    .TeamContents{
+        position: relative;
+        left: 3%;
+    }
+    .team-img{
+        width: 250px;
+        height: 250px;
+    }
+    #card-body-team{
+        position: relative;
+        left: 4%;
+    }
+    .team-name{
+        font-size: 2rem;
+        margin-bottom: 0;
+    }
+    .team-label{
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+    .team-desc{
+        opacity: 0.7;
+        font-size: 0.9rem;
+        width: 85%;
+        text-align: justify;
+        line-height: 20px;
+    }
+
+    .song_title{
+        font-size: 3rem;
+    }
+    .song_desc{
+        font-size: 1.2rem;
+        width: 78%;
+        line-height: 38px;
+    }
+    .song_details iframe{
+        width: 500px;
+        height: 300px;
+    }
+
+    .contactform{
+        position: relative;
+        right: 4%;
+    }
+    .contactform input{
+        height: 50px;
+    }
+    .contactform textarea{
+        height: 150px;
+    }
+
+    #createticket_body{
+        background-image: var(--body-color);
+        overflow-x: hidden;
+    }
+    #createticket_body .card{
+        width: 28rem;
+    }
+    #createticket_body .form-control{
+        font-size: 14.5px;
+        padding: 15px 40px 15px 15px;
+    }
+
+    #ticketdetails_body .card{
+        max-width: 40rem;
+    }
+    #ticketdetails_body .card-body{
+        display: flex;
+        flex-direction: column;
+    }
+    #ticketdetails_body .card-title{
+        font-size: 2.5rem;
+    }
+    #ticketdetails_body .card-text{
+        font-size: 0.9rem;
+    }
+
+    /* ------------------------------------------------ */
+
+    #tablebody_alltickets h1{
+        font-size: 2.5rem;
+    }
+
+    #tablebody_alltickets table, th, tr, td{
+        padding: 3px;
+    }
+    
+    #tablebody_alltickets td, th{
+        font-size: 0.8rem;
+    }
+    #tablebody_alltickets table{
+        max-width: 35rem;
+        height: 20vh;
+    }
+
+    #ticketqueue_body .card-title{
+        font-size: 2.5rem;
+    }
+    #ticketqueue_body td,
+    #ticketqueue_body th{
+        font-size: 0.85rem;
+    }
+    .ticketqueue_table{
+        max-width: 40rem;
+    }
+    
+
+    #workspace_body table,th,tr,td{
+        border: 2px solid #fff;
+        padding: 15px;
+        font-size: 0.8rem;
+    }
+    #workspace_body tr{
+        border: 4px solid #ffffffc7;
+    }
+    #workspace_body th{
+        border: 1px solid #ffffff3a;
+        color: #fff;
+    }
+    #workspace_body td{
+        border: 1px solid #ffffff3a;
+    }
+    
+}
+
+@media(max-width: 558px){
+    #homebody .container h1{
+        font-size: 3.8rem;
+    }
+    #homebody .container .description-brandname{
+        font-size: 0.85rem;
+    }
+    #homebody #mainsection{
+        margin-bottom: 0px;
+    }
+    #homebody .carousel-item img{
+        height: 350px;
+    }
+    #homebody #events{
+        margin-top: 150px;
+    }
+    #homebody #events h2{
+        font-size: 2rem;
+    }
+
+    .aboutcaption{
+        font-size: 3.1rem;
+    }
+    .aboutpara{
+        width: 87%;
+        font-size: 1.1rem;
+        line-height: 32px;
+    } 
+    
+    .team-img{
+        width: 200px;
+        height: 200px;
+    }
+    #card-body-team{
+        position: relative;
+        left: 4%;
+    }
+    .team-name{
+        font-size: 1.25rem;
+    }
+    .team-label{
+        font-size: 1rem;
+        opacity: 0.9;
+    }
+    .team-desc{
+        font-size: 0.76rem;
+        width: 85%;
+        line-height: 19.5px;
+    }
+    .TeamContents{
+        position: relative;
+        left: 0%;
+    }
+    .team-member-img{
+        border: 4px solid rgb(41, 37, 63);
+        border-radius: 13px;
+    }
+
+/* event */
+    #cardcontainer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0px;
+        margin-left: 0;
+        padding-right: 45px;
+    }
+    #eventcard{
+        width: 23rem;
+        height: 28rem;
+        position: relative;
+        left: 0px;
+    }
+    #eventcardimg{
+        height: 180px;
+    }
+    #eventcard .caption{
+        top: 21%;
+    }
+    #eventcard .caption .photocaption{
+        font-size: 1.8rem;
+    }
+    #eventcard .card-title{
+        font-size: 1.4rem;
+    }
+    #eventcard .card-text{
+        font-size: 0.8rem;
+    }
+    #eventcard .spot{
+        font-size: 0.8rem;
+    }
+
+    .song_title{
+        font-size: 2.5rem;
+    }
+    .song_desc{
+        font-size: 1.1rem;
+        width: 80%;
+        line-height: 35px;
+    }
+    .song_details iframe{
+        width: 320px;
+        height: 260px;
+    }
+
+    .contactform{
+        position: relative;
+        right: 4%;
+    }
+    .contactform input{
+        height: 40px;
+    }
+    .contactform textarea{
+        height: 140px;
+    }
+
+    #createticket_body{
+        background-image: var(--body-color);
+    }
+    #createticket_body .card{
+        width: 21rem;
+    }
+    #createticket_body .card-title{
+        font-size: 2.1rem;
+    }
+    #createticket_body h2{
+        font-size: 1.5rem;
+    }
+    #createticket_body h5{
+        font-size: 1.1rem;
+    }
+    #createticket_body .form-control{
+        font-size: 14px;
+        padding: 15px 40px 15px 15px;
+    }
+    #ticketdetails_body .card{
+        width: 21rem;
+    }
+    #ticketdetails_body .card-title{
+        font-size: 2.1rem;
+    }
+    #ticketdetails_body .card-text{
+        font-size: 0.8rem;
+    }
+
+    #tablebody_alltickets h1{
+        font-size: 2.1rem;
+    }
+    #tablebody_alltickets table, th, tr, td{
+        padding: 2px;
+    }
+    #tablebody_alltickets td, th{
+        font-size: 0.72rem;
+    }
+    #tablebody_alltickets table{
+        height: 20vh;
+        max-width: 30rem;
+    }
+
+    #ticketqueue_body .card-title{
+        font-size: 2rem;
+    }
+    #ticketqueue_body td, th{
+        font-size: 0.8rem;
+    }
+    #ticketqueue_body table, th, tr, td{
+        padding: 14px 5px;
+        font-size: 0.7rem;
+    }
+
+    #workspace_body .card{
+        background-image: var(--body-color);
+    }
+    #workspace_body table,th,tr,td{
+        border: 2px solid #fff;
+        padding: 3px;
+    }
+
+    #workspace_body tr{
+        border: 4px solid #ffffffc7;
+    }
+}
+
+@media(max-width: 340px){
+    #homebody .container{
+        height: 50vh;
+    }
+    #homebody .container h1{
+        font-size: 3.2rem;
+    }
+    #homebody .container .description-brandname{
+        font-size: 0.8rem;
+    }
+    #homebody .carousel-item img{
+        height: 250px;
+    }
+    #homebody #events h2{
+        font-size: 1.8rem;
+    }
+    
+    .aboutcaption{
+        font-size: 2.6rem;
+    }
+    .aboutpara{
+        width: 88%;
+        font-size: 1rem;
+        line-height: 30px;
+    } 
+    
+    .team-img{
+        width: 150px;
+        height: 150px;
+    }
+    #card-body-team{
+        position: relative;
+        left: 3%;
+    }
+    .team-name{
+        position: relative;
+        font-size: 1.2rem;
+        width: 330px;
+    }
+    .team-label{
+        font-size: 0.9rem;
+        opacity: 0.9;
+    }
+    .team-desc{
+        font-size: 0.7rem;
+        width: 90%;
+        line-height: 19px;
+    }
+    .TeamContents{
+        position: relative;
+        left: 1%;
+    }
+    .team-member-img{
+        border: 3px solid rgb(41, 37, 63);
+        border-radius: 13px;
+    }
+
+/* event */
+    #eventcard #brandname{
+        font-size: 1.4rem;
+    }
+    #eventcard{
+        width: 18rem;
+        height: 28rem;
+    }
+    #eventcardimg{
+        height: 180px;
+    }
+    #eventcard .caption{
+        top: 21%;
+    }
+    #eventcard .card-title{
+        font-size: 1.2rem;
+    }
+    #eventcard .card-text{
+        font-size: 0.7rem;
+    }
+    #eventcard .btn{
+        width: 80px;
+    }
+    #eventcard a{
+        font-size: 0.7rem;
+    }
+
+    .song_title{
+        font-size: 2rem;
+    }
+    .song_desc{
+        font-size: 0.9rem;
+        width: 90%;
+        line-height: 33px;
+    }
+    .song_details iframe{
+        width: 280px;
+        height: 230px;
+    }
+
+    .contactform{
+        position: relative;
+        right: 10%;
+    }
+    .contactform input{
+        width: 100%;
+        height: 35px;
+        margin-left: 10px;
+        width: 90%;
+    }
+    .contactform textarea{
+        width: 10vw;
+        margin-left: 10px;
+        height: 110px;
+        width: 90%;
+    }
+    #createticket_body .card{
+        width: 19rem;
+    }
+    #createticket_body .card-title{
+        font-size: 1.8rem;
+    }
+    #createticket_body h2{
+        font-size: 1.3rem;
+    }
+    #createticket_body h5{
+        font-size: 1rem;
+    }
+    #createticket_body .form-control{
+        font-size: 13.5px;
+        padding: 12px 37px 12px 12px;
+    }
+    #ticketdetails_body .card{
+        width: 19rem;
+    }
+    #ticketdetails_body .card-title{
+        font-size: 1.65rem;
+    }
+    #ticketdetails_body .card-text{
+        font-size: 0.65rem;
+    }
+
+    #tablebody_alltickets h1{
+        font-size: 1.7rem;
+    }
+
+    #tablebody_alltickets table, th, tr, td{
+        padding: 1px;
+    }
+    
+    #tablebody_alltickets td, th{
+        font-size: 0.7rem;
+    }
+    #tablebody_alltickets table{
+        max-width: 30rem;
+    }
+    /* ------------------------------------ */
+    #ticketqueue_body .card-title{
+        font-size: 1.7rem;
+    }
+    #ticketqueue_body td, th{
+        font-size: 0.7rem;
+    }
+    #ticketqueue_body table, th, tr, td{
+        padding: 14px 5px;
+    }
+}

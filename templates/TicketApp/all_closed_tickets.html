@@ -1,0 +1,65 @@
+{% extends 'TicketApp/ticketbase.html' %}
+
+{% block title %}
+Workspace
+{% endblock %}
+
+
+{% block content %}
+
+<div class="card mx-auto mt-5" style="width: 76rem;">
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <div class="card-body">
+      <h5 class="card-title">Workspace</h5>
+      <table class="table table-bordered">
+        <tr>
+            <th>Ticket ID</th>
+            <th>Title</th>
+            <th>Created On</th>
+            <th>Created by</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+
+        {% for ticket in tickets %}
+        <tr>
+            <td>{{ticket.ticket_number}}</td>
+            <td>{{ticket.event_title}}</td>
+            <td>{{ticket.date_created}}</td>
+            <td>{{ticket.created_by}}</td>
+            
+            <!-- {% if assigned_to %}
+
+            <td>{{ticket.assigned_to}}</td>
+            {% else %}
+
+            <td>Not Assigned</td>
+            {% endif %} -->
+
+            {% if ticket.ticket_status == "Active" %}
+            <td><span class="badge bg-success">
+                Activate
+            </span></td>
+
+            {% elif ticket.ticket_status == "Pending" %}
+            <td><span class="badge bg-warning">
+                Pending
+            </span></td>
+
+            {% elif ticket.ticket_status == "Completed" %}
+            <td><span class="badge bg-danger">
+                Completed
+            </span></td>
+            {% endif %}
+
+            <td><small>
+                <a href="{% url 'ticket_details' ticket.pk %}">View Details</a>
+            </small></td>
+        
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+</div>
+
+{% endblock %}

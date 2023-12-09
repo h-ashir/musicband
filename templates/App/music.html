@@ -1,0 +1,40 @@
+{% extends 'App/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Music
+{% endblock %}
+
+
+{% block content %}
+
+<body id="musicbody">
+    
+<div class="container-fluid" id="music">
+    <div class="musiccontents">
+        <!-- <div class="song_details">
+            <h1 class="song_title">Song Name</h1>
+            <h4 class="song_desc">The Baddest Badass is here! Check out this full-blooded rager featuring the OG Badass #ThalapathyVijay, in the fiery voice of #AnirudhRavichander</h4>
+        </div>
+        <div class="song_img_div">
+            <img src="{% static '/images/Screenshot (19).png' %}" class="song_img" alt="">
+            <div class="btn btn-danger watchnow">Watch Now</div>
+        </div> -->
+
+        {% for m in music %}
+        <div class="song_details">
+            <h1 class="song_title mt-4">{{m.song_title}}</h1>
+            <h4 class="song_desc">{{m.song_description}}</h4>
+            <iframe class="youtubeimg" src="{{m.song_link_youtube}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/5rgHYP0dD_4?si=7yUr6raUxXjGXsnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+            <br><br><br>
+            <hr>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+
+{% endblock %}

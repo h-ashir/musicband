@@ -1,0 +1,45 @@
+{% extends 'TicketApp/ticketbase.html' %}
+{% load widget_tweaks %}
+{% block title %}
+Create Ticket
+{% endblock %}
+
+{% block content %}
+<body id="createticket_body">
+    
+<div class="row">
+    <div class="col">
+        <div class="card mx-auto m-5" style="border: none;">
+            <div class="card-body text-center">
+                <h5 class="card-title mb-3 opacity-75 text-white">Book your Tickets</h5><hr>
+                {{ form.errors }}
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="mb-4">
+                       <h2 class="text-white"> {{events.event_title}}</h2>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="text-white opacity-75">Date - {{events.event_date}} | Time - {{events.event_time}}</h5>
+                    </div>
+                    <div class="mb-4">
+                        <h5 class="text-white opacity-75">Venue : {{events.event_venue}}</h5>
+                    </div>
+                    <div class="mb-5">
+                        {% render_field form.number_of_person class="form-control" %}
+                    </div>
+                    <div class="mb-5">
+                        {% render_field form.person_mobile_number class="form-control" %}
+                    </div>
+                    <div class="mb-5">
+                        {% render_field form.person_mail_address class="form-control" %}
+                    </div>
+                    <button class="btn btn-success" value="Submit">Submit</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+{% endblock %}

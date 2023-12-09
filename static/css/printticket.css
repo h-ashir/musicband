@@ -1,0 +1,29 @@
+#ticketdetails_body {
+    background-color: white;
+}
+
+
+.card {
+    border: 1px solid #000;
+    background-color: white;
+}
+button{
+    display: none;
+}
+nav{
+    display: none;
+}
+
+.card-title{
+    color: black;
+}
+.card-text{
+    color: black;
+    opacity: 0.8;
+}
+button{
+    visibility: hidden;
+}
+.assigned{
+    visibility: hidden;
+}

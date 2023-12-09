@@ -1,0 +1,25 @@
+{% extends 'App/base.html' %}
+
+{% block title %}
+confirmation
+{% endblock %}
+
+{% block content %}
+<body id="confirmationbody">
+    
+    <div class="container text-center">
+        <!-- <h1>Confirmation</h1> -->
+        <div class="alert alert-success m-5" role="alert">
+            <!-- <h1>Booking Confirmed</h1><br><br>    -->
+            <h3 class="returntitle m-3">
+                <a href="{% url 'home' %}">Return to Home Page</a>
+            </h3>
+            <h3 class="returnticket m-3">
+               <a class="" href="{% url 'ticketbase' %}">View Tickets</a> 
+            </h3>
+        </div>
+        <p class="opacity-25">Logged in as : {{name}}</p>
+        
+    </div>
+</body>
+{% endblock %}

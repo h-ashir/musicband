@@ -1,0 +1,85 @@
+{% extends 'TicketApp/ticketbase.html' %}
+
+{% load static %}
+
+{% block title %}
+Ticket Details
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" type="text/css" href="{% static '/css/printticket.css' %}" media="print">
+
+<body id="ticketdetails_body">
+
+    <div class="row mb-5">
+        <div class="col mb-5">
+        <div class="card mx-auto mt-5 bg-dark mb-5">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{ticket.event_title}}</h5>
+                <div class="row mt-4 mb-4">
+                    <div class="col card-text">
+                        <b>Ticket ID : </b>{{ticket.ticket_number}}
+                    </div> 
+                    <div class="col card-text">
+                        <b>Venue : </b>{{ticket.event_title.event_venue}}
+                    </div> 
+                </div>
+                <div class="row mt-4 mb-4">
+                    <div class="col card-text">
+                        <b>Booked on : </b>{{ticket.date_created}}
+                    </div> 
+                    <div class="col card-text">
+                        <b>Date : </b>{{ticket.event_title.event_date}}
+                    </div> 
+                </div>
+
+                <div class="row mt-4 mb-4">
+                    <div class="col card-text">
+                        <b>Booked by : </b>{{ticket.created_by}}
+                    </div>
+                    <div class="col card-text">
+                        <b>Time : </b>{{ticket.event_title.event_time}}
+                    </div>
+                    
+                </div>
+                <div class="row mt-4 mb-4">
+                    {% if ticket.accepted_date == none %}
+                    <div class="col card-text text-danger">
+                        <b>Accepted Date : </b>{{ticket.accepted_date}}
+                    </div>
+                    {% else %}
+                    <div class="col card-text text-success">
+                        <b>Accepted Date : </b>{{ticket.accepted_date}}
+                    </div>
+                    {% endif %}
+                    <div class="col card-text">
+                        <b>Count : </b>{{ticket.number_of_person}}
+                    </div>
+                </div>
+                <div class="row mt-4 mb-4">
+                    <div class="assigned col card-text opacity-50">
+                        <b class="">Assigned to : </b>{{ticket.assigned_to}}
+                    </div>
+                </div>
+                <div class="row mt-4 mb-4">
+                    <div class="col card-text">
+                        {% if ticket.accepted_date == none %}
+                        <button class="btn btn-warning printticketbtn" onclick="">Ticket not available</button>
+                        {% else %}
+                        <button class="btn btn-success printticketbtn" onclick="window.print()">Print Ticket</button>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- {% if ticket.accepted_date == none %} -->
+            <!-- <button class="btn btn-warning printticketbtn" onclick="">Ticket not accepted</button>
+        {% else %}
+            <button class="btn btn-success printticketbtn" onclick="window.print()">Print Tickets</button>
+        {% endif %} -->
+     </div>
+    </div>
+</body>
+
+{% endblock %}

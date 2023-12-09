@@ -1,0 +1,37 @@
+{% extends 'App/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Teams
+{% endblock %}
+
+
+{% block content %}
+
+<body id="teambody">
+    
+<div class="container text-center" id="team-container">
+   
+            {% for t in team %}
+            <div class="TeamContents  mt-5 rounded-3 border-0 ">
+                <div class="team-member-img">
+                    <img src="{{t.member_image.url}}" class="team-img card-img-top rounded-3" alt="">
+                </div>
+                <div class="card-body" id="card-body-team">
+                    <h3 class="team-name text-white">{{t.member_name}}</h4><br>
+                    <h5 class="team-label text-white">{{t.member_label}}</h5><br>
+                    <p class="team-desc text-white">{{t.member_description}}</p>
+                </div>
+                <div class="playlistdiv">
+                        <a class="bi bi-spotify" href="{{t.member_playlist}}">
+                            <span class="displayplaylist">Check out the playlist</span>
+                        </a>
+                </div>
+                
+            </div><br><br><br><hr>
+            {% endfor %}
+</div>
+
+</body>
+{% endblock %}

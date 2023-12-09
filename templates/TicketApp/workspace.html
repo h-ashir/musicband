@@ -1,0 +1,68 @@
+{% extends 'TicketApp/ticketbase.html' %}
+
+{% block title %}
+Workspace
+{% endblock %}
+
+
+{% block content %}
+
+<body id="workspace_body">
+    
+    <!-- <div class="card-body"> -->
+      <h5 class="card-title text-center text-white opacity-75 m-3">Workspace</h5>
+      <table class="workspace_table mx-auto mt-3 mb-5">
+        <thead>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Title</th>
+                <th>Created On</th>
+                <th>Created by</th>
+                <th>Status</th>
+                <th>Accepted On</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+
+        {% for ticket in tickets %}
+    <tbody>
+        <tr>
+            <td>{{ticket.ticket_number}}</td>
+            <td>{{ticket.event_title}}</td>
+            <td>{{ticket.date_created}}</td>
+            <td>{{ticket.created_by}}</td>
+
+            {% if ticket.ticket_status == "Active" %}
+            <td><span class="badge bg-success">
+                Active
+            </span></td>
+
+            {% elif ticket.ticket_status == "Pending" %}
+            <td><span class="badge bg-warning">
+                Pending
+            </span></td>
+
+            {% elif ticket.ticket_status == "Completed" %}
+            <td><span class="badge bg-danger">
+                Completed
+            </span></td>
+            {% endif %}
+
+            <td>{{ticket.accepted_date}}</td>
+
+            <td><small>
+                <a href="{% url 'ticket_details' ticket.pk %}" class="text-danger">View Details</a>
+            </small></td>
+        
+        </tr>
+    </tbody>
+
+        {% endfor %}
+      </table>
+    </div>
+</div>
+
+</body>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'App/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Contact
+{% endblock %}
+
+
+{% block content %}
+
+<body class="" id="contactbody">
+    <div class="container-fluid  text-center">
+        <div class="contactform m-5">
+            <form action="" method="POST">
+                <h1 class="text-black opacity-50">Contact Us</h1>
+                {% csrf_token %}
+                <input type="text" class="border-0 rounded-2" name="name" id="name" placeholder="Enter your Name"><br><br><br>
+                <input type="email" class="border-0 rounded-2" name="email" id="email" placeholder="Enter your Email Address"><br><br><br>
+                <textarea name="message" id="message" cols="30" rows="10" class="border-0 rounded-2" placeholder="Enter your Message"></textarea><br>
+                <button type="submit"  class="btn m-5 ms-4">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+
+{% endblock %}

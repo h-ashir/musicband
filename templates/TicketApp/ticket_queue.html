@@ -1,0 +1,81 @@
+{% extends 'TicketApp/ticketbase.html' %}
+
+{% block title %}
+Ticket queue
+{% endblock %}
+
+
+{% block content %}
+<body id="ticketqueue_body">
+    
+<!-- <div class="card mx-auto mt-5" style="border: none;"> -->
+    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <!-- <div class="card-body"> -->
+    <h5 class="card-title text-center text-white opacity-75 m-3">Pending Tickets</h5>
+    <table class="ticketqueue_table mx-auto mt-3 mb-5">
+    <thead>
+        <tr>
+            <th>Ticket ID</th>
+            <th>Event</th>
+            <th>Booked On</th>
+            <th>Booked by</th>
+            <th>Number</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+
+        {% for ticket in tickets %}
+    <tbody>
+
+        <tr>
+            <td>{{ticket.ticket_number}}</td>
+            <td>{{ticket.event_title}}</td>
+            <td>{{ticket.date_created}}</td>
+            <td>{{ticket.created_by}}</td>
+            <td>{{ticket.person_mobile_number}}</td>
+
+            
+            <!-- {% if assigned_to %}
+
+            <td>{{ticket.assigned_to}}</td>
+            {% else %}
+
+            <td>Not Assigned</td>
+            {% endif %} -->
+
+            {% if ticket.ticket_status == "Active" %}
+            <td><span class="badge bg-success">
+                Activate
+            </span></td>
+
+            {% elif ticket.ticket_status == "Pending" %}
+            <td><span class="badge bg-warning">
+                Pending
+            </span></td>
+
+            {% elif ticket.ticket_status == "Completed" %}
+            <td><span class="badge bg-danger">
+                Completed
+            </span></td>
+            {% endif %}
+
+            {% if request.user.is_engineer %}
+            <td><small>
+                <a href="{% url 'accept_ticket' ticket.pk %}" class="text-danger">Accept</a>
+            </small></td>
+            {% elif request.user.is_customer %}
+            <td><small>
+                <p class="text-white"></p>
+            </small></td>
+            {% endif %}
+        
+        </tr>
+    </tbody>
+
+        {% endfor %}
+      </table>
+</body>
+
+{% endblock %}

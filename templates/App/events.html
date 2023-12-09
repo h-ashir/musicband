@@ -1,0 +1,47 @@
+{% extends 'App/base.html' %}
+
+{% load static %}
+
+{% block title %}
+Events
+{% endblock %}
+
+{% block content %}
+
+<body id="eventbody">
+    
+
+<div class="container text-center" id="cardcontainer">
+    <!-- <div class="row"> -->
+        <!-- <div class="p-5 mt-0 m-5 ms-0"> -->
+            <!-- <div class=""> -->
+                {% for e in events %}
+
+                <div class="cardcontainer mt-5">
+                    <!-- <div class="col-12"> -->
+                        <div class="card mb-5 border-0" id="eventcard">
+                            <img src="{{e.event_image.url}}" class="card-img-top rounded-top-1" id="eventcardimg" alt="...">
+                            <div class="caption">
+                                <h1 id="brandname" class="photocaption">HARMONYX</h1>
+                            </div>
+                            <div class="card-body bg-dark rounded-bottom-1" id="card-body-event">
+                              <h5 class="card-title text-white mb-2">{{e.event_title}}</h5>
+                              <h5 class="card-text text-white mt-3 mb-3">{{e.event_description}}</h5>
+                              <h5 class="card-text text-white opacity-25 mb-2 spot">Venue : {{e.event_venue}}</h5>
+                              <h5 class="card-text text-white opacity-25 mb-2 spot">Date : {{e.event_date}}</h5>
+                              <h5 class="card-text text-white opacity-25 mb-1 spot">Time : {{e.event_time}}</h5>
+                              <br>
+                              <a href="{% url 'create_ticket' e.pk %}" class="btn" id="bookbtn">Book Now</a>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+                    
+                 </div>
+                
+                {% endfor %}
+            <!-- </div> -->
+        <!-- </div> -->
+</div>
+</body>
+
+{% endblock %}

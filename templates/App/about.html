@@ -1,0 +1,84 @@
+{% extends 'App/base.html' %}
+
+{% load static %}
+
+{% block title %}
+About
+{% endblock %}
+
+
+{% block content %}
+
+<body id="aboutbody">
+    <div class="containertext-center">
+        <div class="aboutcontents mb-5">
+            <div class="about">
+                <h1 class="aboutcaption mt-5 mb-5">About Harmonyx</h1><hr>
+                <p class="aboutpara mb-5">Harmonyx, the band with a soundscape built upon elements of folk and classical sounds of India interspersed, at times, with layers of progressive, pop, ambient and electronic textures. 5 years, 250+ shows, 20+ international shows in 10 countries, it truly has been a stupendous journey for the band. With a 10 member ensemble cast the band's strength lies in its versatility and unpredictability thanks to 3 vocalists and seven instrumentalists from the length and breadth of the country, each of whom brings on board, a wealth of diverse musical, linguistic and cultural influences thus creating a unique musical experience that is truly global in nature yet local in idea.</p>
+                <p class="aboutpara mb-5">Harmonyx Kochi 2019, the debut show was conducted in 2019 and it has 5 songs in all despite the struggles faced during COVID-19.  The second show, was at an Engineering college in Chennai in 2021 , and is a collaborative featuring legendary artists from around the globe.</p>
+            </div>
+            <h1 class="gallary_title text-white text-center">Gallary</h1><br><hr><br><br>
+            <!-- <div class="row"> -->
+                <div class="col mb-5">
+                    <div class="aboutimg">
+                        <div class="gallary1">
+                            <div id="carouselExample1" class="carousel slide">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="{% static '/images/aboutimg2.jpeg' %}" class="d-block" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="{% static '/images/aboutimg1.jpeg' %}" class="d-block" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="{% static '/images/aboutimg3.jpeg' %}" class="d-block" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="aboutimg">
+                        <div class="gallary2">
+                            <div id="carouselExample" class="carousel slide">
+                            <div class="carousel-inner">
+                              <div class="carousel-item active">
+                                <img src="{% static '/images/aboutimg4.jpeg' %}" class="d-block" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="{% static '/images/aboutimg5.jpeg' %}" class="d-block" alt="...">
+                              </div>
+                              <div class="carousel-item">
+                                <img src="{% static '/images/aboutimg6.jpeg' %}" class="d-block" alt="...">
+                              </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            <!-- </div> -->
+        </div>
+    </div>
+</body>
+
+{% endblock %}

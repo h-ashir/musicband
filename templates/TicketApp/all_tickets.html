@@ -1,0 +1,74 @@
+{% extends 'TicketApp/ticketbase.html' %}
+
+{% block title %}
+All Tickets
+{% endblock %}
+
+
+{% block content %}
+
+<body id="tablebody_alltickets">
+    <!-- <div class="card mx-auto mt-5 mb-5" style="border: none;"> -->
+    <h1 class="card-title text-center text-white m-3 opacity-75">Tickets</h1>
+    <table id="" class="all_tickets_table mx-auto mt-3 mb-5 table-bordered">
+        <thead>
+            <tr>
+            <!-- <th>Ticket ID</th> -->
+                <th>Event</th>
+                <th>Booked On</th>
+                <th>Booked by</th>
+            <!-- <th>Mobile</th> -->
+                <th>Event Date</th>
+                <!-- <th>Assigned to</th> -->
+                <th>Status</th>
+                <th>View Details</th>
+            </tr>
+        </thead>
+
+        {% for ticket in tickets %}
+    
+        <tbody>
+
+        <tr>
+            <!-- <td>{{ticket.ticket_number}}</td> -->
+            <td>{{ticket.event_title}}</td>
+            <td>{{ticket.date_created}}</td>
+            <td>{{request.user}}</td>
+            <!-- <td>{{ticket.person_mobile_number}}</td> -->
+            <td>{{ticket.event_title.event_date}}</td>
+        <!-- {% if ticket.assigned_to %}
+            <td>{{ticket.assigned_to}}</td>
+
+        {% else %}
+            <td>Not Assigned</td>
+        {% endif %} -->
+
+        {% if ticket.ticket_status == "Active" %}
+            <td><span class="badge bg-success">
+                Active
+            </span></td>
+
+            {% elif ticket.ticket_status == "Pending" %}
+            <td><span class="badge bg-warning">
+                Pending
+            </span></td>
+
+            {% elif ticket.ticket_status == "Completed" %}
+            <td><span class="badge bg-success">
+                Completed
+            </span></td>
+        {% endif %}
+
+            <td><small>
+                <a href="{% url 'ticket_details' ticket.pk %}" class="text-success">Generate Ticket</a>
+            </small></td>
+
+        </tr>
+    </tbody>
+
+        {% endfor %}
+    </table>
+    </div>
+</body>
+
+{% endblock %}
